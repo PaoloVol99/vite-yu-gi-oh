@@ -11,7 +11,7 @@ export default {
         },
         archetype: {
             type: String,
-            required: true
+            required: false
         }
     }
 
@@ -34,14 +34,26 @@ export default {
     text-align: center;
     background-color: orange;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     .card-img {
         display: block;
     }
     .card-name {
         display: block;
+        font-size: 16px;
+        text-transform: uppercase;
+        color: white;
+        font-weight: 600;
+        margin-bottom: auto;
+        padding: 0 5px;
     }
     .card-archetype {
         display: block;
+        font-size: 12px;
+        text-transform: uppercase;
+        padding: 0 5px;
     }
 }
 

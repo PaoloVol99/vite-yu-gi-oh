@@ -1,5 +1,13 @@
 @use './partials/reset';
 
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: rgb(49, 49, 49);
+}
+
 .container {
     max-width: 900px;
     margin: 0 auto;
