@@ -16,6 +16,7 @@ export default {
         return {
             cards: [],
             store,
+            errorMessageSearch: ''
         }
     },
     methods: {
@@ -37,6 +38,7 @@ export default {
             .catch((error) => {
                 this.store.cards = []
             })
+            this.errorMessageSearch = this.store.search
         }
     },
     created() {
@@ -69,7 +71,7 @@ export default {
                     <Card :imageSrc="card.card_images[0].image_url" :name="card.name" :archetype="card.archetype" />
                 </div>
                 <div class="error" v-show="store.cards.length === 0">
-                    {{ `Nessun risultato per "${store.search}"` }}
+                    {{ `Nessun risultato per "${errorMessageSearch}"` }}
                 </div>
             </div>
         </div>
